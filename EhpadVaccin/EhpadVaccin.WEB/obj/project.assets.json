@@ -8,24 +8,31 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/alexis/.nuget/packages/": {}
+    "C:\\Users\\Louis\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexis/Desktop/EPSI_B3/PROG .NET/EhpadVaccin/EhpadVaccin/EhpadVaccin.WEB/EhpadVaccin.WEB.csproj",
+      "projectUniqueName": "C:\\Users\\Louis\\source\\repos\\EhpadVaccin\\EhpadVaccin\\EhpadVaccin.WEB\\EhpadVaccin.WEB.csproj",
       "projectName": "EhpadVaccin.WEB",
-      "projectPath": "/Users/alexis/Desktop/EPSI_B3/PROG .NET/EhpadVaccin/EhpadVaccin/EhpadVaccin.WEB/EhpadVaccin.WEB.csproj",
-      "packagesPath": "/Users/alexis/.nuget/packages/",
-      "outputPath": "/Users/alexis/Desktop/EPSI_B3/PROG .NET/EhpadVaccin/EhpadVaccin/EhpadVaccin.WEB/obj/",
+      "projectPath": "C:\\Users\\Louis\\source\\repos\\EhpadVaccin\\EhpadVaccin\\EhpadVaccin.WEB\\EhpadVaccin.WEB.csproj",
+      "packagesPath": "C:\\Users\\Louis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Louis\\source\\repos\\EhpadVaccin\\EhpadVaccin\\EhpadVaccin.WEB\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/alexis/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
