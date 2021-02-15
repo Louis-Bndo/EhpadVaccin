@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EhpadVaccin.ORM.Injection>
+
+@{ ViewData["Title"] = "Index"; }
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.personne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateInjection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateRappel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numLot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeVaccin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.marque)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.personne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateInjection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateRappel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numLot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeVaccin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marque)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>}
+    </tbody>
+</table>
