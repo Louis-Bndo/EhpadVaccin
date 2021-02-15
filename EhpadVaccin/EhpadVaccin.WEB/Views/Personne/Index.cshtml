@@ -1,4 +1,4 @@
-@model EhpadVaccin.ORM.Personne
+@model IEnumerable<EhpadVaccin.ORM.Personne>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nom)
+                @Html.DisplayNameFor(model => model.nom)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Prenom)
+                @Html.DisplayNameFor(model => model.prenom)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.dateNaissance)
@@ -34,10 +34,10 @@
         @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nom)
+                @Html.DisplayFor(modelItem => item.nom)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Prenom)
+                @Html.DisplayFor(modelItem => item.prenom)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.dateNaissance)
