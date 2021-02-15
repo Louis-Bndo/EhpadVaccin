@@ -9,7 +9,7 @@ namespace EhpadVaccin.ORM
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-
+            options.UseSqlite("Data Source=ehpad.db");
         }
        
     }
