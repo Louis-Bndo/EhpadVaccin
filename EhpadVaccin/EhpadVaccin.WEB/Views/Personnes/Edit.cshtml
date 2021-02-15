@@ -1,0 +1,65 @@
+@model EhpadVaccin.ORM.Personne
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Personne</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nom" class="control-label">Votre nom :</label> 
+                <input asp-for="nom" class="form-control" />
+                <span asp-validation-for="nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+<<<<<<< HEAD
+                <label asp-for="prenom" class="control-label">Votre prénom :</label>
+=======
+                <label asp-for="prenom" class="control-label">Votre pr?nom :</label>
+>>>>>>> 93f6a5278ec135c3ab98119153b422af6819c375
+                <input asp-for="prenom" class="form-control" />
+                <span asp-validation-for="prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateNaissance" class="control-label">Votre date de naissance :</label>
+                <input asp-for="dateNaissance" class="form-control" />
+                <span asp-validation-for="dateNaissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="Choice1"
+                       asp-for="sexe" value="Homme">
+                <label for="Choice1">Homme</label>
+
+                <input type="radio" id="Choice2"
+                       asp-for="sexe" value="Femme">
+                <label for="Choice2">Femme</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="Choice3"
+                       asp-for="role" value="R?sident">
+                <label for="Choice3">R?sident</label>
+
+                <input type="radio" id="Choice4"
+                       asp-for="role" value="Personnel">
+                <label for="Choice4">Personnel</label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
