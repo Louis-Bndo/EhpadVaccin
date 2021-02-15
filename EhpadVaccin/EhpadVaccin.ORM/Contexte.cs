@@ -5,6 +5,7 @@ namespace EhpadVaccin.ORM
     {
         public DbSet<Personne> Personnes { get; set; }
         public DbSet<Injection> Injections { get; set; }
+        public DbSet<Vaccin> Vaccins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

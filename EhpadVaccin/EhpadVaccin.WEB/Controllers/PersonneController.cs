@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EhpadVaccin.ORM;
+using static EhpadVaccin.ORM.Personne;
 
 namespace EhpadVaccin.WEB.Controllers
 {
