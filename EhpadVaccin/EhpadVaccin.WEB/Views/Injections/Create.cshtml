@@ -12,14 +12,27 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+            <div class="form-group">
+                <label asp-for="personne" class="control-label">La personne : </label>
+                <select asp-for="personne" >
+                    <option value="">@Html.DisplayNameFor(model => model.personne)</option>
+                </select>
+                <span asp-validation-for="personne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="typeVaccin" class="control-label">Le type de vaccin : </label>
+                <select asp-for="typeVaccin">
+                    <option value="">@Html.DisplayNameFor(model => model.typeVaccin)</option>
+                </select>
+                <span asp-validation-for="typeVaccin" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="marque" class="control-label">La marque du vaccin : </label>
                 <input asp-for="marque" class="form-control" />
                 <span asp-validation-for="marque" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="numLot" class="control-label">Numéro du lot du vaccin injecté : </label>
+                <label asp-for="numLot" class="control-label">Numero du lot du vaccin injecte : </label>
                 <input asp-for="numLot" class="form-control" />
                 <span asp-validation-for="numLot" class="text-danger"></span>
             </div>
@@ -28,7 +41,7 @@
                 <input asp-for="dateInjection" class="form-control" />
                 <span asp-validation-for="dateInjection" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
