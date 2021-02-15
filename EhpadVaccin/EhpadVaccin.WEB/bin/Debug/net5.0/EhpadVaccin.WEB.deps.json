@@ -26,6 +26,9 @@
       "EhpadVaccin.WEB/1.0.0": {
         "dependencies": {
           "EhpadVaccin.ORM": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
+          "Microsoft.EntityFrameworkCore.Sqlite.Design": "1.1.6",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.2",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -103,7 +106,7 @@
           "Microsoft.AspNetCore.StaticFiles": "5.0.0.0",
           "Microsoft.AspNetCore.WebSockets": "5.0.0.0",
           "Microsoft.AspNetCore.WebUtilities": "5.0.0.0",
-          "Microsoft.CSharp": "5.0.0.0",
+          "Microsoft.CSharp.Reference": "5.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions.Reference": "5.0.0.0",
           "Microsoft.Extensions.Caching.Memory.Reference": "5.0.0.0",
           "Microsoft.Extensions.Configuration.Abstractions.Reference": "5.0.0.0",
@@ -315,6 +318,15 @@
           "EhpadVaccin.WEB.dll": {}
         }
       },
+      "Humanizer.Core/2.8.26": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.Sqlite.Core/5.0.3": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
@@ -373,6 +385,19 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.3": {},
+      "Microsoft.EntityFrameworkCore.Design/5.0.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61114"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.3": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.3",
@@ -440,6 +465,11 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Sqlite.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.2"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -1774,7 +1804,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.CSharp/5.0.0.0": {
+      "Microsoft.CSharp.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.CSharp.dll": {}
         },
@@ -3006,6 +3036,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Humanizer.Core/2.8.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "path": "humanizer.core/2.8.26",
+      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
     "Microsoft.Data.Sqlite.Core/5.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3041,6 +3085,13 @@
       "path": "microsoft.entityframeworkcore.analyzers/5.0.3",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bn1aa2M16p3aIS68q7aXb2Shv0G8evtwdp6SNfnxzTw5vdKH1BBe1g/4BPrY5a2YLp2dVwep2Jtjvk5VB9E0qA==",
+      "path": "microsoft.entityframeworkcore.design/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.design.5.0.2.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/5.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3075,6 +3126,13 @@
       "sha512": "sha512-EfZa+dhD6KhiVk83d28rGgrcAlPw4d7I1FIA6dZyxqjblQ4VbwNufn1CqZ6XDc9qIUiD5GO53vGS0/Vh9MMM2w==",
       "path": "microsoft.entityframeworkcore.sqlite.design/1.1.6",
       "hashPath": "microsoft.entityframeworkcore.sqlite.design.1.1.6.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eJf7HbWRS6w7wJiOyjpkbkO1fTThElNzOru1d3+yWBLoEGv5v5eSN9aPXmHcXfyR9Uzx3fmjNIuMcyppDq5o/A==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "type": "package",
@@ -4096,7 +4154,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CSharp/5.0.0.0": {
+    "Microsoft.CSharp.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

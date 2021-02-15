@@ -5,6 +5,8 @@ namespace EhpadVaccin.ORM
     {
         public int Id { get; set; }
 
+        public String Nom { get; set; }
+
         public Vaccin()
         {
         }
