@@ -53,7 +53,7 @@ namespace EhpadVaccin.WEB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,type")] Vaccin vaccin)
+        public async Task<IActionResult> Create([Bind("Id,Nom")] Vaccin vaccin)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace EhpadVaccin.WEB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,type")] Vaccin vaccin)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom")] Vaccin vaccin)
         {
             if (id != vaccin.Id)
             {
