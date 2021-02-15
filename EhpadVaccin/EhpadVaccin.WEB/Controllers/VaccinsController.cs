@@ -9,7 +9,7 @@ using EhpadVaccin.ORM;
 
 namespace EhpadVaccin.WEB.Controllers
 {
-    public class VaccinController : Controller
+    public class VaccinsController : Controller
     {
         private readonly Contexte _context = new Contexte();
 
@@ -21,7 +21,7 @@ namespace EhpadVaccin.WEB.Controllers
         // GET: Vaccin
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Vaccin.ToListAsync());
+            return View(await _context.Vaccins.ToListAsync());
         }
 
         // GET: Vaccin/Details/5
@@ -32,7 +32,7 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var vaccin = await _context.Vaccin
+            var vaccin = await _context.Vaccins
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (vaccin == null)
             {
@@ -72,7 +72,7 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var vaccin = await _context.Vaccin.FindAsync(id);
+            var vaccin = await _context.Vaccins.FindAsync(id);
             if (vaccin == null)
             {
                 return NotFound();
@@ -123,7 +123,7 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var vaccin = await _context.Vaccin
+            var vaccin = await _context.Vaccins
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (vaccin == null)
             {
@@ -138,15 +138,15 @@ namespace EhpadVaccin.WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var vaccin = await _context.Vaccin.FindAsync(id);
-            _context.Vaccin.Remove(vaccin);
+            var vaccin = await _context.Vaccins.FindAsync(id);
+            _context.Vaccins.Remove(vaccin);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool VaccinExists(int id)
         {
-            return _context.Vaccin.Any(e => e.Id == id);
+            return _context.Vaccins.Any(e => e.Id == id);
         }
     }
 }

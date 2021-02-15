@@ -6,25 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EhpadVaccin.ORM;
+using static EhpadVaccin.ORM.Personne;
 
 namespace EhpadVaccin.WEB.Controllers
 {
-    public class InjectionController : Controller
+    public class PersonnesController : Controller
     {
         private readonly Contexte _context = new Contexte();
 
-        //public InjectionController(Contexte context)
+        //public PersonneController(Contexte context)
         //{
         //    _context = context;   
         //}
 
-        // GET: Injection
+        // GET: Personne
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Injection.ToListAsync());
+            return View(await _context.Personnes.ToListAsync());
         }
 
-        // GET: Injection/Details/5
+        // GET: Personne/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +33,39 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var injection = await _context.Injection
+            var personne = await _context.Personnes
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (injection == null)
+            if (personne == null)
             {
                 return NotFound();
             }
 
-            return View(injection);
+            return View(personne);
         }
 
-        // GET: Injection/Create
+        // GET: Personne/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Injection/Create
+        // POST: Personne/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,dateInjection,dateRappel,numLot,marque")] Injection injection)
+        public async Task<IActionResult> Create([Bind("Id,nom,prenom,dateNaissance,sexe,role")] Personne personne)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(injection);
+                _context.Add(personne);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(injection);
+            return View(personne);
         }
 
-        // GET: Injection/Edit/5
+        // GET: Personne/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +73,22 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var injection = await _context.Injection.FindAsync(id);
-            if (injection == null)
+            var personne = await _context.Personnes.FindAsync(id);
+            if (personne == null)
             {
                 return NotFound();
             }
-            return View(injection);
+            return View(personne);
         }
 
-        // POST: Injection/Edit/5
+        // POST: Personne/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,dateInjection,dateRappel,numLot,marque")] Injection injection)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,nom,prenom,dateNaissance,sexe,role")] Personne personne)
         {
-            if (id != injection.Id)
+            if (id != personne.Id)
             {
                 return NotFound();
             }
@@ -96,12 +97,12 @@ namespace EhpadVaccin.WEB.Controllers
             {
                 try
                 {
-                    _context.Update(injection);
+                    _context.Update(personne);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InjectionExists(injection.Id))
+                    if (!PersonneExists(personne.Id))
                     {
                         return NotFound();
                     }
@@ -112,10 +113,10 @@ namespace EhpadVaccin.WEB.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(injection);
+            return View(personne);
         }
 
-        // GET: Injection/Delete/5
+        // GET: Personne/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +124,30 @@ namespace EhpadVaccin.WEB.Controllers
                 return NotFound();
             }
 
-            var injection = await _context.Injection
+            var personne = await _context.Personnes
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (injection == null)
+            if (personne == null)
             {
                 return NotFound();
             }
 
-            return View(injection);
+            return View(personne);
         }
 
-        // POST: Injection/Delete/5
+        // POST: Personne/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var injection = await _context.Injection.FindAsync(id);
-            _context.Injection.Remove(injection);
+            var personne = await _context.Personnes.FindAsync(id);
+            _context.Personnes.Remove(personne);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InjectionExists(int id)
+        private bool PersonneExists(int id)
         {
-            return _context.Injection.Any(e => e.Id == id);
+            return _context.Personnes.Any(e => e.Id == id);
         }
     }
 }
