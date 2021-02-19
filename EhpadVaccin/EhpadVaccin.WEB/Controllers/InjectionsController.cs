@@ -148,5 +148,7 @@ namespace EhpadVaccin.WEB.Controllers
         {
             return _context.Injections.Any(e => e.Id == id);
         }
+
+        
     }
 }

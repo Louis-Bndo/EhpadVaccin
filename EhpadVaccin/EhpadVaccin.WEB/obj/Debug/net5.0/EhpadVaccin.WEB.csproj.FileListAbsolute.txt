@@ -259,3 +259,4 @@ C:\Users\Louis\source\repos\EhpadVaccin\EhpadVaccin\EhpadVaccin.WEB\obj\Debug\ne
 C:\Users\Louis\source\repos\EhpadVaccin\EhpadVaccin\EhpadVaccin.WEB\obj\Debug\net5.0\Razor\Views\Vaccins\Details.cshtml.g.cs
 C:\Users\Louis\source\repos\EhpadVaccin\EhpadVaccin\EhpadVaccin.WEB\obj\Debug\net5.0\Razor\Views\Vaccins\Edit.cshtml.g.cs
 C:\Users\Louis\source\repos\EhpadVaccin\EhpadVaccin\EhpadVaccin.WEB\obj\Debug\net5.0\Razor\Views\Vaccins\Index.cshtml.g.cs
+C:\Users\Louis\source\repos\EhpadVaccin\EhpadVaccin\EhpadVaccin.WEB\obj\Debug\net5.0\Razor\Views\Personnes\ListeInjections.cshtml.g.cs
